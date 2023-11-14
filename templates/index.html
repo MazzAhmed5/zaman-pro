@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passport Information Form</title>
+</head>
+<body>
+    <h1>Passport Information Form</h1>
+    {% if result %}
+    <p>{{ result['message'] }}</p>
+    <pre class="notranslate"><code>{{ result['data'] }}</code></pre>
+
+    {% endif %}
+    <form action="/" method="post">
+        <label for="surname">Surname:</label>
+        <input type="text" id="surname" name="surname" required><br>
+
+        <label for="given_name">Given Name:</label>
+        <input type="text" id="given_name" name="given_name" required><br>
+
+        <label for="document_number">Document Number:</label>
+        <input type="text" id="document_number" name="document_number" required><br>
+
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" required><br>
+
+        <label for="nationality">Nationality:</label>
+        <input type="text" id="nationality" name="nationality" required><br>
+
+        <label for="dob">Date of Birth (DOB):</label>
+        <input type="text" id="dob" name="dob" required><br>
+
+        <label for="sex">Sex:</label>
+        <select id="sex" name="sex" required>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+        </select><br>
+
+        <label for="issuing_date">Issuing Date:</label>
+        <input type="text" id="issuing_date" name="issuing_date" required><br>
+
+        <label for="expiring_date">Expiring Date:</label>
+        <input type="text" id="expiring_date" name="expiring_date" required><br>
+
+        <label for="optional_values">Optional Values:</label>
+        <input type="text" id="optional_values" name="optional_values"><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
