@@ -1,0 +1,7 @@
+# requirements.txt
+
+# MRZ generator library
+mrz==0.8.0
+
+# Flask web framework
+Flask==2.0.1
